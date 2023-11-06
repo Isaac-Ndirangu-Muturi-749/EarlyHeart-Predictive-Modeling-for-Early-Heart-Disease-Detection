@@ -1,15 +1,16 @@
 {
-    "AWSEBDockerrunVersion": "1",
-    "Image": {
-      "Name": "YourDockerImageRepository/YourDockerImageName:latest",
-      "Update": "true"
-    },
-    "Ports": [
-      {
-        "ContainerPort": 9696
-      }
-    ],
-    "Volumes": [],
-    "Logging": "/var/eb_log"
-  }
-  
+"AWSEBDockerrunVersion": 2,
+"containerDefinitions": [
+    {
+    "name": "midterm_ml_zoomcamp",
+    "image": "ndirangumuturi749/zoomcamp-test:latest",
+    "memory": 512,
+    "portMappings": [
+        {
+        "hostPort": 80,
+        "containerPort": 9696
+        }
+    ]
+    }
+]
+}
