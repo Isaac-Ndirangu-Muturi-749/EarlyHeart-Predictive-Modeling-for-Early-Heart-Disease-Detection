@@ -16,7 +16,8 @@ sample_patient_data = {
 }
 
 # URL of your local API endpoint
-url = "http://localhost:9696/app"
+url = "http://heart-serving-env.eba-pahrexjp.eu-west-3.elasticbeanstalk.com/predict"
+
 
 # Send a POST request to the API with the sample patient data
 response = requests.post(url, json=sample_patient_data).json()
