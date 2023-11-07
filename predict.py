@@ -12,7 +12,7 @@ loaded_vectorizer = loaded_model_data['vectorizer']
 
 app = Flask('heart_disease')
 
-@app.route('/app', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
         data = request.get_json()
