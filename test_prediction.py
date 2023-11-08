@@ -14,11 +14,11 @@ sample_patient_data = {
     "Oldpeak": 1.2,
     "ST_Slope": "Upsloping"
 }
+print("Input features:\n", sample_patient_data)
+print()
 
 # URL of your local API endpoint
 url = "http://heart-serving-env.eba-pahrexjp.eu-west-3.elasticbeanstalk.com/predict"
-
-
 # Send a POST request to the API with the sample patient data
 response = requests.post(url, json=sample_patient_data).json()
 
